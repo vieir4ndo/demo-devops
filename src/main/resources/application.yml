@@ -1,6 +1,6 @@
 spring:
   profiles:
-    active: dev
+    active: prod
   output:
     ansi:
       enabled: ALWAYS
@@ -27,4 +27,5 @@ management:
         include: health,info
   info:
     env:
+
       enabled: true
