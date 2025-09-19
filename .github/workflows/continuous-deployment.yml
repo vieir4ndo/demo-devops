@@ -41,7 +41,7 @@ jobs:
         with:
           registry: ${{ env.GHCR_URL }}
           username: ${{ github.actor }}
-          password: ${{ secrets.GHCR_PERSONAL_ACCESS_TOKEN }}
+          password: ${{ secrets.REPO_TOKEN }}
 
       - name: 🐳 Build & Push Docker image
         uses: docker/build-push-action@v4
@@ -60,3 +60,4 @@ jobs:
           curl --fail -X POST "https://api.render.com/deploy/${{ secrets.RENDER_DEPLOY_HOOK_TOKEN }}" \
           && echo "✅ Deployment succeeded" \
           || (echo "❌ Deployment failed" && exit 1)
+
