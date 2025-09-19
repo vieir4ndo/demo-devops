@@ -27,4 +27,5 @@ management:
         include: health,info
   info:
     env:
+
       enabled: true
